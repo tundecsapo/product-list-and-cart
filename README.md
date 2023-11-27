@@ -6,22 +6,22 @@ This project is built upon React + TypeScript + Vite + Material UI.
 
 - Clone the repository
 - Open the project folder in your IDE
-- Install the dependencies by running: <strong>npm i<strong>
-- After installation is complete, run the project by: <strong>npm run dev</strong>
+- Install the dependencies by running: ***npm i***
+- After installation is complete, run the project by: ****npm run dev***
 
 ### Lint
 
-- You can check if there is any linting issues by running: <strong>npm run lint</strong>
+- You can check if there is any linting issues by running: ***npm run lint***
 
 ### Jest Test
 
-- You can run some unit and snapshot tests by running: <strong>npm run test</strong>
+- You can run some unit and snapshot tests by running: ***npm run test***
 
 ### How the project should look like?
 
 #### /PRODUCTS
 
-- After running npm run dev, the project should run on: http://localhost:5173/
+- After running ***npm run dev***, the project should run on: http://localhost:5173/
 
 - You can reach the /products page by clicking on the "Products" on the top navigation bar. In mobile view, you should click the hamburger icon first. (The product page is also the default page that loads when you arrive at the main page.)
 - On the product page you should be able to see a list of products that are being fetched from a mockAPI.
