@@ -26,18 +26,16 @@ export const ProductListProvider = ({ children }: { children: ReactNode }) => {
   const { status, data, isFetching, isLoading, isError, isSuccess } =
     useProducts(page, size);
 
-  useEffect(() => {
-    if (
-      window.location.pathname === "/products" &&
-      (!urlParams.get("page") || !urlParams.get("size"))
-    ) {
-      history.pushState(
-        {},
-        "",
-        `${window.location.pathname}?page=${page + 1}&size=${size}`
-      );
-    }
-  }, []);
+  if (
+    window.location.pathname === "/products" &&
+    (!urlParams.get("page") || !urlParams.get("size"))
+  ) {
+    history.pushState(
+      {},
+      "",
+      `${window.location.pathname}?page=${page + 1}&size=${size}`
+    );
+  }
 
   const handlePageChange = (p: number) => {
     setPage(p);
