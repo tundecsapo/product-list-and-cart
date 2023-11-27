@@ -8,6 +8,7 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import Drawer from "@mui/material/Drawer";
+import Icon from "@mui/material/Icon";
 import IconButton from "@mui/material/IconButton";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
@@ -22,8 +23,8 @@ import Typography from "@mui/material/Typography";
 
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import StorefrontIcon from "@mui/icons-material/Storefront";
 
+import assets from "../../../assets";
 import { ProductStoreContext } from "../../stores/productsStore";
 import { CartDialog } from "../cartDialog/CartDialog";
 
@@ -76,7 +77,13 @@ export const NavBar = observer(({ children }: { children: ReactNode }) => {
             disablePadding
             to={item.url}
           >
-            <ListItemButton sx={{ textAlign: "center", color: "#0d3a93", backgroundColor: "rgba(13, 58, 147, 0.2)" }}>
+            <ListItemButton
+              sx={{
+                textAlign: "center",
+                color: "#0d3a93",
+                backgroundColor: "rgba(13, 58, 147, 0.2)",
+              }}
+            >
               <ListItemText primary={item.name} />
             </ListItemButton>
           </ListItem>
@@ -102,7 +109,7 @@ export const NavBar = observer(({ children }: { children: ReactNode }) => {
                 color: "#0d3a93",
               }}
             >
-              <StorefrontIcon sx={{ mr: 1 }} />
+              <Icon component="img" src={assets.storeImage} sx={{ mr: 1 }} />
               <Typography
                 variant="h6"
                 noWrap
@@ -136,7 +143,7 @@ export const NavBar = observer(({ children }: { children: ReactNode }) => {
                 color: "#0d3a93",
               }}
             >
-              <StorefrontIcon sx={{ mr: 1 }} />
+              <Icon component="img" src={assets.storeImage} sx={{ mr: 1 }} />
               <Typography
                 variant="h5"
                 noWrap
