@@ -13,6 +13,10 @@ This project is built upon React + TypeScript + Vite + Material UI.
 
 - You can check if there is any linting issues by running: <strong>npm run lint</strong>
 
+### Jest Test
+
+- You can run some unit and snapshot tests by running: <strong>npm run test</strong>
+
 ### How the project should look like?
 
 #### /PRODUCTS

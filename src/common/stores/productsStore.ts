@@ -61,7 +61,9 @@ export class ProductStore {
 
   get totalPrice(): number {
     return this.selectedProducts
-      .map((product) => product.price * product.selectedAmount)
+      .map((product) =>
+        product.price ? product.price * product.selectedAmount : 0
+      )
       .reduce((a, b) => a + b, 0);
   }
 }

@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+[
+  <style
+    dangerouslySetInnerHTML={
+      {
+        "__html": ".css-4a04zc-MuiContainer-root{width:100%;margin-left:auto;box-sizing:border-box;margin-right:auto;display:block;padding-left:16px;padding-right:16px;padding:32px;padding-top:96px;height:100vh;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:column;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;-webkit-justify-content:center;justify-content:center;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}@media (min-width:600px){.css-4a04zc-MuiContainer-root{padding-left:24px;padding-right:24px;}}@media (min-width:1536px){.css-4a04zc-MuiContainer-root{max-width:1536px;}}",
+      }
+    }
+    data-emotion="css 4a04zc-MuiContainer-root"
+  />,
+  <div
+    className="MuiContainer-root MuiContainer-maxWidthXl css-4a04zc-MuiContainer-root"
+  >
+    <style
+      dangerouslySetInnerHTML={
+        {
+          "__html": ".css-18lrjg1-MuiCircularProgress-root{display:inline-block;color:#1976d2;-webkit-animation:animation-61bdi0 1.4s linear infinite;animation:animation-61bdi0 1.4s linear infinite;}@-webkit-keyframes animation-61bdi0{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}@keyframes animation-61bdi0{0%{-webkit-transform:rotate(0deg);-moz-transform:rotate(0deg);-ms-transform:rotate(0deg);transform:rotate(0deg);}100%{-webkit-transform:rotate(360deg);-moz-transform:rotate(360deg);-ms-transform:rotate(360deg);transform:rotate(360deg);}}",
+        }
+      }
+      data-emotion="css 18lrjg1-MuiCircularProgress-root animation-61bdi0"
+    />
+    <span
+      className="MuiCircularProgress-root MuiCircularProgress-indeterminate MuiCircularProgress-colorPrimary css-18lrjg1-MuiCircularProgress-root"
+      role="progressbar"
+      style={
+        {
+          "height": 140,
+          "width": 140,
+        }
+      }
+    >
+      <style
+        dangerouslySetInnerHTML={
+          {
+            "__html": ".css-1idz92c-MuiCircularProgress-svg{display:block;}",
+          }
+        }
+        data-emotion="css 1idz92c-MuiCircularProgress-svg"
+      />
+      <svg
+        className="MuiCircularProgress-svg css-1idz92c-MuiCircularProgress-svg"
+        viewBox="22 22 44 44"
+      >
+        <style
+          dangerouslySetInnerHTML={
+            {
+              "__html": ".css-176wh8e-MuiCircularProgress-circle{stroke:currentColor;stroke-dasharray:80px,200px;stroke-dashoffset:0;-webkit-animation:animation-1p2h4ri 1.4s ease-in-out infinite;animation:animation-1p2h4ri 1.4s ease-in-out infinite;}@-webkit-keyframes animation-1p2h4ri{0%{stroke-dasharray:1px,200px;stroke-dashoffset:0;}50%{stroke-dasharray:100px,200px;stroke-dashoffset:-15px;}100%{stroke-dasharray:100px,200px;stroke-dashoffset:-125px;}}@keyframes animation-1p2h4ri{0%{stroke-dasharray:1px,200px;stroke-dashoffset:0;}50%{stroke-dasharray:100px,200px;stroke-dashoffset:-15px;}100%{stroke-dasharray:100px,200px;stroke-dashoffset:-125px;}}",
+            }
+          }
+          data-emotion="css 176wh8e-MuiCircularProgress-circle animation-1p2h4ri"
+        />
+        <circle
+          className="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate css-176wh8e-MuiCircularProgress-circle"
+          cx={44}
+          cy={44}
+          fill="none"
+          r={20.2}
+          strokeWidth={3.6}
+          style={{}}
+        />
+      </svg>
+    </span>
+    <style
+      dangerouslySetInnerHTML={
+        {
+          "__html": ".css-xr009-MuiTypography-root{margin:0;font-family:"Roboto","Helvetica","Arial",sans-serif;font-weight:400;font-size:1.5rem;line-height:1.334;letter-spacing:0em;margin-top:24px;}",
+        }
+      }
+      data-emotion="css xr009-MuiTypography-root"
+    />
+    <h5
+      className="MuiTypography-root MuiTypography-h5 css-xr009-MuiTypography-root"
+    >
+      Test text
+    </h5>
+  </div>,
+]
+`;
