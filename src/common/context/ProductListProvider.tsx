@@ -6,8 +6,8 @@ import { Product } from "../types";
 export const ProductListContext = createContext({
   page: 1,
   size: 10,
-  setPage: (page: number) => {},
-  setSize: (size: number) => {},
+  setPage: (_: number) => {},
+  setSize: (_: number) => {},
   status: "idle",
   data: [] as Product[] | null | undefined,
   isFetching: false,

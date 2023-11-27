@@ -17,6 +17,10 @@ This project is built upon React + TypeScript + Vite + Material UI.
 
 - You can run some unit and snapshot tests by running: ***npm run test***
 
+### Build
+
+- To build the project, please run: ***npm run build***
+
 ### How the project should look like?
 
 #### /PRODUCTS

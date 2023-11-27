@@ -17,7 +17,7 @@ export const Pagination = observer(() => {
       count={(data ?? []).length}
       labelRowsPerPage="Products per page:"
       page={page}
-      onPageChange={(e, newPage) => setPage(newPage)}
+      onPageChange={(_, newPage) => setPage(newPage)}
       rowsPerPage={size}
       onRowsPerPageChange={(e) => setSize(parseInt(e.target.value, 10))}
     />
