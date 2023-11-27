@@ -62,6 +62,11 @@ export const QuantityInput = ({
       max={item.availableAmount}
       defaultValue={isCartInput ? defaultValue : item.minOrderAmount}
       ref={cardRef}
+      style={{
+        width: isCartInput ? "100%" : "calc(100% + 32px)",
+        marginLeft: isCartInput ? 0 : "-16px",
+        marginRight: isCartInput ? 0 : "-16px",
+      }}
     />
   );
 };

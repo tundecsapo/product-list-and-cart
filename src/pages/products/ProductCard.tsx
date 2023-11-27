@@ -85,7 +85,12 @@ export const ProductCard = observer(({ item }: { item: Product }) => {
               onClick={removeSelectedProduct}
             >
               <RemoveShoppingCartOutlinedIcon fontSize="small" />
-              <Typography variant="caption">Remove</Typography>
+              <Typography
+                variant="caption"
+                sx={{ display: { xs: "none", md: "block" } }}
+              >
+                Remove
+              </Typography>
             </Button>
             <Button
               size="small"
@@ -93,7 +98,12 @@ export const ProductCard = observer(({ item }: { item: Product }) => {
               sx={{ width: "100%" }}
               onClick={setSelectedProduct}
             >
-              Update
+              <Typography
+                variant="caption"
+                sx={{ display: { xs: "none", md: "block" } }}
+              >
+                Update
+              </Typography>
               <RefreshOutlinedIcon />
             </Button>
           </Box>

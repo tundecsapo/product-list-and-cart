@@ -61,6 +61,7 @@ export const CartCard = observer(({ item }: { item: SelectedProduct }) => {
           <Box
             sx={{
               display: "flex",
+              flexDirection: { xs: "column", sm: "row" },
               justifyContent: "space-between",
               width: "100%",
             }}
@@ -74,10 +75,11 @@ export const CartCard = observer(({ item }: { item: SelectedProduct }) => {
                 {`${priceFormatter.format(item.price)} each`}
               </Typography>
             </span>
-            <Box sx={{ textAlign: "center" }}>
+            <Box sx={{ textAlign: { xs: "left", sm: "center" } }}>
               <Box
                 sx={{
                   display: "flex",
+                  flexDirection: { xs: "column", sm: "row" },
                   justifyContent: "center",
                   width: "100%",
                 }}
@@ -89,18 +91,44 @@ export const CartCard = observer(({ item }: { item: SelectedProduct }) => {
                     isCartInput
                     defaultValue={item.selectedAmount}
                   />
-                  <Typography
-                    variant="subtitle1"
-                    color="error"
-                    onClick={removeSelectedProduct}
+                  <Box
                     sx={{
-                      textDecoration: "underline",
-                      cursor: "pointer",
-                      px: 2,
+                      display: "flex",
+                      justifyContent: { xs: "flex-start", sm: "center" },
+                      alignItems: "center",
+                      mt: { xs: 1, sm: 0 },
                     }}
                   >
-                    Remove
-                  </Typography>
+                    <Typography
+                      variant="subtitle1"
+                      color="error"
+                      onClick={removeSelectedProduct}
+                      sx={{
+                        textDecoration: "underline",
+                        cursor: "pointer",
+                        px: { xs: 0, sm: 2 },
+                      }}
+                    >
+                      Remove
+                    </Typography>
+                    <Button
+                      size="small"
+                      color="success"
+                      variant="contained"
+                      onClick={setSelectedProduct}
+                      sx={{
+                        display: { xs: "flex", sm: "none" },
+                        p: 0,
+                        ml: { xs: 2 },
+                        height: "40px",
+                        minWidth: "40px",
+                        width: "40px",
+                        borderRadius: "50%",
+                      }}
+                    >
+                      <RefreshOutlinedIcon />
+                    </Button>
+                  </Box>
                 </div>
                 <Button
                   size="small"
@@ -108,10 +136,12 @@ export const CartCard = observer(({ item }: { item: SelectedProduct }) => {
                   variant="contained"
                   onClick={setSelectedProduct}
                   sx={{
+                    display: { xs: "none", sm: "flex" },
                     p: 0,
-                    ml: 2,
+                    ml: { xs: 0, sm: 2 },
                     height: "40px",
                     minWidth: "40px",
+                    width: "40px",
                     borderRadius: "50%",
                   }}
                 >
