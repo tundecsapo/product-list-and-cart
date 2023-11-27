@@ -7,7 +7,7 @@ This project is built upon React + TypeScript + Vite + Material UI.
 - Clone the repository
 - Open the project folder in your IDE
 - Install the dependencies by running: ***npm i***
-- After installation is complete, run the project by: ****npm run dev***
+- After installation is complete, run the project by: ***npm run dev***
 
 ### Lint
 
