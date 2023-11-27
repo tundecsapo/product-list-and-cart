@@ -42,7 +42,7 @@ export class ProductStore {
 
   initStore() {
     const savedCart =
-      JSON.parse(localStorage.getItem("dummyStoreCart") ?? "") || [];
+      JSON.parse(localStorage.getItem("dummyStoreCart") ?? "[]") || [];
     this.selectedProducts = savedCart;
 
     autorun(() => {

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { useState, createContext, useEffect, ReactNode } from "react";
+import { useState, createContext, ReactNode } from "react";
 import { useProducts } from "../../pages/products/hooks/useProducts";
 import { Product } from "../types";
 
@@ -18,13 +18,13 @@ export const ProductListContext = createContext({
 
 export const ProductListProvider = ({ children }: { children: ReactNode }) => {
   const urlParams = new URLSearchParams(window.location.search);
-  const [page, setPage] = useState(
-    parseInt(urlParams.get("page") ?? "1", 10) - 1
-  );
-  const [size, setSize] = useState(parseInt(urlParams.get("size") ?? "10", 10));
+  const [params, setParams] = useState({
+    page: parseInt(urlParams.get("page") ?? "1", 10) - 1,
+    size: parseInt(urlParams.get("size") ?? "10", 10),
+  });
 
   const { status, data, isFetching, isLoading, isError, isSuccess } =
-    useProducts(page, size);
+    useProducts(params.page, params.size);
 
   if (
     window.location.pathname === "/products" &&
@@ -33,22 +33,21 @@ export const ProductListProvider = ({ children }: { children: ReactNode }) => {
     history.pushState(
       {},
       "",
-      `${window.location.pathname}?page=${page + 1}&size=${size}`
+      `${window.location.pathname}?page=${params.page + 1}&size=${params.size}`
     );
   }
 
   const handlePageChange = (p: number) => {
-    setPage(p);
+    setParams({ page: p, size: params.size });
     history.pushState(
       {},
       "",
-      `${window.location.pathname}?page=${p + 1}&size=${size}`
+      `${window.location.pathname}?page=${p + 1}&size=${params.size}`
     );
   };
 
   const handleSizeChange = (s: number) => {
-    setSize(s);
-    setPage(0);
+    setParams({ page: 0, size: s });
     history.pushState(
       {},
       "",
@@ -59,9 +58,9 @@ export const ProductListProvider = ({ children }: { children: ReactNode }) => {
   return (
     <ProductListContext.Provider
       value={{
-        page,
+        page: params.page,
         setPage: handlePageChange,
-        size,
+        size: params.size,
         setSize: handleSizeChange,
         status,
         data,
